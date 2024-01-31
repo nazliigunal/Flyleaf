@@ -1,0 +1,116 @@
+.logo {   
+          font-size: 36px;
+          font-family: sans-serif;
+          margin-left: 30px;
+          color:#5585b5;
+          font-weight: bold;
+      }
+.logo i {
+          font-size: 30px;
+}
+      
+.secenekler ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          padding-top: 60px;
+          margin-right: 100px;
+      }
+      
+.secenekler ul li {
+          display: inline-block;
+          margin-right: 20px;
+          position: relative;
+          margin-bottom: 20px;
+          
+      }
+      
+.secenekler ul li a {
+          font-size: 20px;
+          color: #5585b5; 
+          text-decoration: none;
+          margin-left: 10px;
+          margin-bottom: 5px;
+      }
+      
+.secenekler ul li a:hover {
+          color: #474746;
+      }
+      
+.menü {
+          height: 80px;
+          width: 150px;
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color:#032f3c;
+          padding: 10px;
+          font-size: small;
+      
+      }
+      
+.secenekler ul li:hover .menü {
+          display: block;
+      }
+      
+.menü ul {
+          list-style: none;
+          margin: 0%;
+          padding: 0%;
+      }
+      
+.menü ul li {
+          margin-bottom: 10px;
+      
+      }
+.menü ul li a i{
+          font-size: 15px;
+      }
+      
+.menü ul li a {
+          color:  #5585b5; 
+          text-decoration: none;
+          margin-right: 0%;
+      }
+.navbar {
+          margin: 0;
+          background-color: #032f3c;
+          width: 100%;
+          height: 90px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding:  20px;
+          box-sizing: border-box;
+          margin-bottom: 0%;
+      }
+      body{
+          margin: 0%;
+          padding: 0%;
+      }
+      .flash-message{
+        height: 30px;
+        width: 100%px;
+        color: #FFFFFF;
+        text-align: center;
+
+
+      }
+    .success {
+      background-color: #5dab60eb;
+      border: #5dab60;
+    }
+    
+    .danger {
+      background-color: #c26666eb;
+      border: #c26666 ;
+    }
+    
+    .info {
+      background-color: #4d7393e0;
+      border: #4d7393;
+    }
+    
+
+      

@@ -1,0 +1,48 @@
+{% extends "helper/navbar.html" %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="static/navbar.css"> 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="static/okuma.css">
+{% endblock %}
+
+{% block ayri %}
+ <li><a href="">
+    <i class="fa-solid fa-circle-user"></i> Profil
+</a></li>
+{% endblock %}
+
+{% block down_container %}
+    <div class="down-container">
+        <ul>
+          <h1> <i class="fa-solid fa-list-check"></i> Okuma Listem </h1>
+            {% for kitap in kullanici.okuyacak_kitaplar %}
+            <div class="kitap">
+                <li>
+                   <ul>
+                       <div class="foto" >
+                        <img src="{{ url_for('static', filename='kitaplar/' + kitap.resim_yolu) }}" alt="Kitap Fotoğrafı">
+                       </div>
+                       
+                       <div class="ici">
+                        <li><h2>{{ kitap.ad }}</h2></li>
+                       <li><h4> Yazar : {{ kitap.yazar }}</h4></li>
+                       {% if kitap.çevirmen is not none %}
+                           <li> Çevirmen: {{ kitap.çevirmen }}</li>
+                           <li>Orijinal Adı: {{ kitap.orijinal_ad }}</li>   
+                       {%else %}     
+                       {% endif %}
+                       <li>Kitabın Türü: {{ kitap.tur }}</li>
+                       <li>İlk Yayın Tarihi: {{ kitap.tarih }}</li>
+                       <li>Kitabın Konusu: {{ kitap.konu }}</li>
+                       <li>ISBN: {{ kitap.ISBN }}</li>
+                       <li>Sayfa Sayısı: {{ kitap.sayfa_sayisi }}</li>
+                       </div>
+                       
+                   </ul>
+                </li>
+              </div>  
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

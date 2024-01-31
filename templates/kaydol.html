@@ -1,0 +1,40 @@
+{% include "helper/islemler.html" %}
+{% from "helper/form.html" import render_field %}
+
+{% block title%} Kayıt Ol {% endblock %} 
+
+{% block downcontainer %}
+
+<div class="down-container">
+    <div class="formyap">
+        <h3>KAYDOL</h3>
+        <form method=post>
+
+            <div class="form">
+                {{ render_field(form.ad) }}
+            </div>
+
+            <div class="form">
+                {{ render_field(form.soyad) }}
+            </div>
+
+            <div class="form">
+                {{ render_field(form.kullaniciadi) }}
+            </div>
+            <div class="form">
+                {{ render_field(form.mail) }} 
+            </div>
+            <div class="form">
+                {{ render_field(form.sifre) }}
+            </div>
+            <div class="form">
+                {{ render_field(form.sifretekrar) }} 
+            </div>
+
+            <div class="form">
+                <input type="submit" value="Kayıt Ol">
+            </div>
+         </form>   
+    </div>
+ </div>
+{% endblock  downcontainer  %}

@@ -1,0 +1,25 @@
+{%extends 'helper/navbar.html'%}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='anasayfa.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ {% endblock %}
+{%block no1%}<a href="">
+          <i class="fa-solid fa-circle-user"></i> Profil
+      </a> {%endblock%}
+
+ {% block down_container%}
+ <div class="postlar">
+    {% for yazi in yazilar %}
+
+    <div class="post">
+         
+            <div class="ad"> {{ yazi.yazan.ad }} {{ yazi.yazan.soyad }}</div>
+            <div class="kullanici">{{ yazi.yazan.kullanici_adi  }}</div>
+            <div class="tarih">{{ yazi.yazilma_tarihi  }}</div> 
+            <div class="icerik">{{ yazi.icerik  }}</div> 
+        
+    </div>
+   <hr>
+    {% endfor %}
+ {% endblock %}      

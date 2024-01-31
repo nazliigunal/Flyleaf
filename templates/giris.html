@@ -1,0 +1,31 @@
+{% include "helper/islemler.html" %}
+{% from "helper/form.html" import render_field %}
+{% block css %}<link rel="stylesheet" type="text/css" href="static/ana.css"> {%endblock%}
+{% block title%} {% endblock %} 
+
+{% block downcontainer %}
+
+
+<div class="down-container">
+    <div class="formyap">
+        <h3>Giriş Yap</h3>
+        <br>
+        <form method=post>
+            <div class="form">
+                {{ render_field(form.kullanici_adi) }}
+            </div>
+            <div class="form">
+                {{ render_field(form.sifre_) }}
+            </div>
+            <br>
+            <div class="form">
+                <input type="submit" value="Giriş Yap">
+            </div>
+            <br>
+            <div>
+            <a href="/kaydol">Hesabınız Yoksa Kayıt Olun!</a>
+            </div>
+         </form>   
+    </div>
+ </div>
+{% endblock downcontainer %}

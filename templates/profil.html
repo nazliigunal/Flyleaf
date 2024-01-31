@@ -1,0 +1,130 @@
+
+{% extends "helper/navbar.html" %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profil.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ {% endblock %}
+    
+<!--  block başlangıcı-->
+{% block down_container %}
+
+<!-- down-container -->
+<div class="down-container">
+  <div class="foto">
+    {% if kullanici.profil_fotografi is none %}
+      <img src="{{ url_for('static', filename='/Profil.jpg') }}" />
+   
+    {%else %}  
+    <p>.</p>   
+    {% endif %}
+  </div>
+
+  <div class="right-container">
+    <div class="ad">
+      <h2>{{kullanici.ad}} {{kullanici.soyad}}</h2>
+  </div>
+
+  <div class="kullanici-adi">
+
+    <h4>@{{kullanici.kullanici_adi}}</h4>
+  </div>
+
+  <div class="bio">
+    {% if kullanici.biyografi is not none %}
+       <h6>{{kullanici.biyografi}}</h6>
+   
+    {%else %} 
+    <p>.</p>    
+    {% endif %}
+  </div>
+
+</div>
+</div>
+
+<div class="alt">
+
+
+  <div class="sol">
+    <a href="/okumaListem"><h4>Okucaklarım </h4></a>
+    <div class="okucaklar">
+      {% for kitap in kullanici.okuyacak_kitaplar  %}
+      <div class="tane">
+       
+      <div class="resim"><img src="{{ url_for('static', filename='kitaplar/' + kitap.resim_yolu) }}" alt="Kitap Fotoğrafı"></div>
+      <div class="kitap-isim">{{ kitap.ad }}</div>
+      <div class="kitap-yazar">{{ kitap.yazar }}</div>
+      <hr>
+      
+    </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
+  <div class="orta">
+    <h4>Yazılarım</h4>
+    
+    <div class="yazi-yaz"> 
+    <form method=post>
+    {% from "helper/form.html" import render_field %}
+    <div class="post-form">
+      
+      {{ render_field(form.post , class="text") }}
+    </div>
+
+   <div class="paylas">
+    <input type="submit" value="Paylaş ">
+    </div>
+    </form>
+    </div>
+   <hr>
+   <div class="postlar">
+    {% for yazi in kullanici_yazilari %}
+
+    <div class="yazilarim">
+     <div class="ad"> {{ kullanici.ad }} {{ kullanici.soyad }}</div>
+     <div class="kullanici">{{ kullanici.kullanici_adi }}</div> 
+     <div class="tarih">{{ yazi.yazilma_tarihi }}</div> 
+
+     <form method="post" action="{{ url_for('yorum') }}">
+      <input type="hidden" name="kullanici" value="{{ kullanici.id}}">
+      <input type="hidden" name="yazi" value="{{ yazi.id }}">
+      <div class="yorum"><a href="/yorum"><i class="fa-regular fa-comment"></i></a></div>
+      
+     </form>
+
+
+     <div class="icerik">{{ yazi.icerik }}</div>
+    </div>
+   <hr>
+    {% endfor %}
+
+   </div>
+
+
+
+
+  </div>
+
+
+
+  <div class="sag">
+    <a href="/okuduklarim"><h4>Okuduklarım </h4></a>
+    <div class="okucaklar">
+      {% for kitap in kullanici.favori_kitaplar  %}
+      <div class="tane">
+      <div class="resim"><img src="{{ url_for('static', filename='kitaplar/' + kitap.resim_yolu) }}" alt="Kitap Fotoğrafı"></div>
+      <div class="kitap-isim">{{ kitap.ad }}</div>
+      <div class="kitap-yazar">{{ kitap.yazar }}</div>
+      <hr>
+      
+    </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

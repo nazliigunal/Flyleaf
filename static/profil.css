@@ -1,0 +1,135 @@
+
+.down-container  {
+          background-color: #164e58;
+          height: 300px;
+          margin-top: 0px;
+          display: flex;
+          align-items: flex-start;
+          border: 2;
+          
+}
+      
+
+.foto img {
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          margin-right: 20px;
+          margin-left: 30px;
+ }
+.right-container{
+          margin-left: 75px;
+          padding-top:30px ;
+}
+.ad{
+         font-size: larger; 
+         margin-bottom: -10px;
+}
+
+
+
+.alt{
+      display: flex;
+      align-items: flex-start;
+      height: 100%;
+      
+
+}
+.sol{
+      text-align: center;
+      width: 20%;
+      height: 100%;
+      }
+.orta{
+      text-align: center;
+      width: 60%; 
+      background-color: #bfd2d7; 
+      height: 100%; 
+      padding: 30px; 
+}
+
+.sag{
+   text-align: center;
+   width:20% ;   
+   height: 100%;
+    
+}
+
+
+.text{
+      width: 70%;
+      
+      height: 100px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      resize: vertical;
+      
+}
+.paylas input[type=submit]{
+      background-color:  rgba(128, 169, 198, 0.85);
+      border: 1;
+      border-color: rgb(128, 169, 198);
+      margin-left: 0px;
+      padding-bottom: 9x;
+      margin-top: 15px;
+      height: 30px;
+      width: 100px;
+      margin-left: 530px;
+      border-radius: 3px;
+      margin-bottom: 20px;
+}
+.paylas input[type=submit]:hover{
+      background-color: rgb(128, 198, 156);
+      
+  
+}
+
+.yazilarim{
+      
+      text-align: left;
+      padding: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      
+}
+.ad{
+      margin: 20px;
+      margin-bottom: 5px;
+}
+.tarih{
+    text-align: right;
+    font-size: small;  
+}
+.icerik{
+      background-color:	#f0f8ff;
+      padding: 20px;
+      border-radius: 10px;
+}
+
+.resim img{
+      height: 150px;
+      width: 100px;
+}
+
+.tane hr {
+      width: 150px;
+      height: 1px; 
+      background-color: #a9c9df; 
+      margin: 20px 0; 
+      border: none;
+      margin-left: 70px;
+}
+
+.sol a{
+      text-decoration: none;
+}
+.sag a{
+text-decoration: none;
+}
+.yorum{
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #164e58;
+}

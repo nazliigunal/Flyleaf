@@ -1,0 +1,63 @@
+.kitap li ul {
+  background-color: #5e80816d;
+  list-style: none;
+  margin-bottom: 30px;
+  padding-bottom :30px; 
+  padding-top: 30px;
+  width: 70%;
+  padding-right: 30px;
+  margin-left: 200px;
+
+}
+.down-container.kitap{
+          list-style: none;
+}
+.down-container ul {
+          list-style: none;
+}
+.kitap li ul {
+          display: flex;
+      }
+      
+.box {
+
+          margin: 5px; 
+      }
+.foto{
+  width: 30%;
+}   
+.ici{
+  width: 30%;
+}  
+.tus{
+  width: 30%;
+  padding-top:40px ;
+  margin-left: 30px;
+  margin-right: -40px;
+}
+
+.tus input[type=submit]{
+  background-color:  rgb(128, 169, 198);
+  border: 0;
+  margin-left: 0px;
+  padding-bottom: 9x;
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+.tus input[type=submit]:hover{
+  background-color: rgb(128, 198, 156);
+  
+
+}
+.kutu{
+  margin: 30px;
+}
+
+.foto img{
+  height: 300px;
+  width: 200px;
+}
+.foto{
+  margin-left: 50px;
+}

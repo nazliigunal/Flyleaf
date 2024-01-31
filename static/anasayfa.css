@@ -1,0 +1,27 @@
+.postlar{
+          background-color: #f0f8ff;
+          margin-left:20% ;
+          margin-right: 20%;
+          text-align: left;
+          padding: 20px;
+          margin-bottom: 20px;
+          
+}
+.post{
+          margin-top: 30px;
+          margin-bottom: 20px;
+}
+
+.ad{
+      margin: 20px;
+          margin-bottom: 5px;
+}
+.tarih{
+        text-align: right;
+        font-size: small;  
+}
+.icerik{
+          background-color:	rgb(191, 214, 234);
+          padding: 20px;
+          border-radius: 10px;
+}

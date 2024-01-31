@@ -1,0 +1,52 @@
+{% extends "helper/navbar.html" %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="static/navbar.css"> 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="static/yorum.css">
+{% endblock %}
+
+{% block ayri %}
+ <li><a href="">
+    <i class="fa-solid fa-circle-user"></i> Profil
+</a></li>
+{% endblock %}
+
+
+{% block down_container %}
+<div class="asagi">
+<div class="yazi">
+  <div class="ad">{{ yazi_kullanici.ad}} {{ yazi_kullanici.soyad}}</div>
+  <div class="kullanici">{{ yazi_kullanici.kullanici_adi }}</div> 
+  <div class="tarih">{{ yazi.yazilma_tarihi }}</div> 
+  <div class="icerik">{{ yazi.icerik }}</div>
+</div>
+  
+  <h3>Yorumlar</h3>
+<div class="yorumlar"></div>
+  {% for yorum in yazi.yorumlar %}
+  <div class="yorum">
+    <div class="ad">{{ yorum.yazan.ad }} {{ yorum.yazan.soyad }}</div>
+    <div class="kullanici">{{ yorum.yazan.kullanici_adi }}</div>
+    <div class="tarih">{{ yorum.yorum_tarihi }}</div>
+    <div class="icerik">{{ yorum.yorum_icerik }}</div>
+</div>
+  {% endfor %}
+
+  <div class="yorum_yaz">
+
+    <h3>Yorum Yap</h3>
+    <form method="post" action="{{ url_for("yorum") }}">
+    {% from "helper/form.html" import render_field %}
+     <div class="yorum-form">
+            
+        {{ render_field(form.yorum , class="text") }}
+     </div>
+      
+     <div class="paylas">
+       <input type="submit" value="Paylaş ">
+     </div>
+    </form>
+  </div>
+    </div>
+{% endblock %}

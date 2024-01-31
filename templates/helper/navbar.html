@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="static/navbar.css"> 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">{%endblock%}
+    <title> {% block title%}  {% endblock %} </title> 
+</head>
+<body>
+
+<div class="navbar">
+        <div class="logo">FlyLeaf <i class="fa-solid fa-bookmark"></i> </div>
+        <div class="secenekler">
+          <nav>
+            <ul>
+              {%block ayri%}{%endblock%} 
+              <li>{%block no1%}<a href="/anasayfa"> <i class="fa-solid fa-house"></i>  Ana Sayfa </a> {%endblock%}</li> 
+              <li>{%block no2%}<a href="/kutuphane"><i class="fa-solid fa-book"></i>  Kütüphane </a>{%endblock%}</li>
+              <li><a href="#"><i class="fa-solid fa-gear"></i></a>
+                <div class="menü">
+                <ul>
+                    <li><a href="/ayarlar">Ayarlar  <i class="fa-solid fa-sliders"></i></a></li>
+                    <li><a href="/">Çıkış Yap <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+
+                </ul>
+              </div>
+            </li>
+           </ul>
+        </nav>
+     </div>
+</div>
+{%include "helper/mesaj.html"%}
+{% block down_container%}
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+.kitap li ul{
+        background-color:#bfd2d7;
+        margin: 30px;
+        display: flex;
+        padding: 40px;
+        margin-left:25% ;
+        margin-right: 25%;
+        border-radius:10px ;
+}
+.kitap img{
+          height: 200px;
+          width: 125px;
+}
+.down-container.kitap{
+          list-style: none;
+}
+.down-container ul {
+          list-style: none;
+}
+.ici{
+       
+    margin-left: 140px;
+}
+.foto{
+          margin-left: 50px;
+          margin-top: 30px;
+}
+.down-container ul h1{
+          margin-left:300px ;
+          margin-top: 40px;
+          margin-bottom: 40px;
+          color: #02474d;
+}

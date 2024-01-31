@@ -1,0 +1,22 @@
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div id="flash-messages">
+      {% for category, message in messages %}
+        <div class="flash-message {{ category }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+<script>
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    var flashMessages = document.querySelectorAll(".flash-message");
+    flashMessages.forEach(function (message) {
+
+      setTimeout(function () {
+        message.style.display = "none";
+      }, 2000); 
+    });
+  });
+</script>
